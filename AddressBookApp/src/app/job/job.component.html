@@ -1,0 +1,42 @@
+
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center">
+        Jobs Details Address Book Page
+    </h1>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-6">
+                    <app-job></app-job>
+            </div>
+            
+            <div class="col-md-6">
+              
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                           <th>Job Title</th>
+                           <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        <tr *ngFor="let pd of jobService.list">
+            <td (click) = "populateForm(pd)">{{ pd.JobTitle }}</td>
+            <td>
+                <i class="fa fa-trash-alt fa-lg text-danger" (click) = "onDelete(pd.JobTitleId)"></i>    
+            </td>
+        </tr>
+                    </tbody>
+                </table>
+                <button (click)="exportAsXLSX()">
+                    <i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button>
+                
+            </div>
+          
+        </div>
+      
+    
+    
+    
+    

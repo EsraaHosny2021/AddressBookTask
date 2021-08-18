@@ -1,0 +1,14 @@
+.nav-link
+{
+    color: white !important;
+    font-weight: bold;
+}
+.navbar-brand
+{
+    font-weight: bold;
+    font-style: italic;
+}
+.btn-outline-dark {
+    font-weight: bold;
+    color: white;
+}

@@ -1,0 +1,48 @@
+
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center">
+        People Details Address Book Page
+    </h1>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-6">
+                    <app-people-form></app-people-form>
+            </div>
+            
+            <div class="col-md-6">
+              
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                           <th>Full Name</th>
+                           <th>Mobile Number</th>
+                           <th>Email</th>
+                           <th>Age</th>
+                           <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        <tr *ngFor="let pd of peopleService.list">
+            <td (click) = "populateForm(pd)">{{ pd.FullName }}</td>
+            <td (click) = "populateForm(pd)">{{ pd.MobileNumber }}</td>
+            <td (click) = "populateForm(pd)">{{ pd.Email }}</td>
+            <td (click) = "populateForm(pd)">{{ pd.Age }}</td>
+            <td>
+                <i class="fa fa-trash-alt fa-lg text-danger" (click) = "onDelete(pd.PersonId)"></i>    
+            </td>
+        </tr>
+                    </tbody>
+                </table>
+                <button (click)="exportAsXLSX()">
+                    <i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button>
+                
+            </div>
+          
+        </div>
+      
+    
+    
+    
+    

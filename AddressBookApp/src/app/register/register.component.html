@@ -1,0 +1,47 @@
+
+<div class="container">
+<div class="row">
+    <form autocomplete="off" #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+
+        <div class="form-group">
+            <div class="row">
+            <div class="col-md-3">
+                    <label>First Name</label>
+            </div>
+            <div class="col-md-8">
+                    <input type="text" class="form-control form-control-lg" name="FirstName"   placeholder="First Name"  #FirstName="ngModel" [(ngModel)] = "userService.selectedUser.FirstName" required [class.invalid] = "FirstName.invalid && FirstName.touched">
+            </div>
+            </div>
+           
+        </div>
+
+
+        <div class="form-group">
+                <div class="row">
+                <div class="col-md-3">
+                <label>Last Name</label>
+                </div>
+                <div class="col-md-8">
+                <input type="text" class="form-control form-control-lg" name="LastName"   placeholder="Last Name"  #LastName="ngModel" [(ngModel)] = "userService.selectedUser.LastName" required [class.invalid] = "LastName.invalid && LastName.touched">
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
+                    <div class="row">
+                    <div class="col-md-3">
+                    <label>Designation</label>
+                    </div>
+                    <div class="col-md-8">
+                    <input type="text" class="form-control form-control-lg" name="Designation"   placeholder="Designation"  #Designation="ngModel" [(ngModel)] = "userService.selectedUser.Designation" required [class.invalid] = "Designation.invalid && Designation.touched">
+                 
+                </div>
+                </div>
+                </div>
+        <input type="submit" class="btn btn-success" value="Register">
+    </form>
+
+    <div class="success" *ngIf="showSuccessMessage">Registered Successfuly</div>
+    <div class="alert" *ngIf="serverErrorMessage">{{serverErrorMessage}}</div>
+
+</div>
+</div>

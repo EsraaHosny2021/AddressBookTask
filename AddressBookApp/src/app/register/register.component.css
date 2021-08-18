@@ -1,0 +1,22 @@
+.container
+{
+    margin:45px;
+    background-color: #198754;
+    padding:20px;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+}
+label
+{
+    color: white;
+    font-weight: bold;
+}
+input.invalid
+{
+    border-color: red;
+}
+.form-group input {
+    font-weight: 500;
+    margin-bottom: 10px;
+}

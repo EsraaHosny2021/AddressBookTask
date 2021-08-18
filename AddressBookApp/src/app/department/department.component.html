@@ -1,0 +1,42 @@
+
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center">
+        Departments Details Address Book Page
+    </h1>
+        </div>
+       
+        <div class="row">
+            <div class="col-md-6">
+                    <app-department></app-department>
+            </div>
+            
+            <div class="col-md-6">
+              
+                <table class="table">
+                    <thead class="thead-light">
+                        <tr>
+                           <th>Department Name</th>
+                           <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        <tr *ngFor="let pd of departmentService.list">
+            <td (click) = "populateForm(pd)">{{ pd.DepartmentName }}</td>
+            <td>
+                <i class="fa fa-trash-alt fa-lg text-danger" (click) = "onDelete(pd.DepartmentId)"></i>    
+            </td>
+        </tr>
+                    </tbody>
+                </table>
+                <button (click)="exportAsXLSX()">
+                    <i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i></button>
+                
+            </div>
+          
+        </div>
+      
+    
+    
+    
+    

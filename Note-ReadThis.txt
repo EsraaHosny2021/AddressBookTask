@@ -1,0 +1,6 @@
+- I'm sorry for not compeleting the whole task.
+ - I coded all parts except login and search by fields. 
+- the task is too large and i have to travel tomorrow. 
+- there is a issue with my about angular and updates that crashes the featured modules
+Job & Department but their logic are correct.
+
